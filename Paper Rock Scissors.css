@@ -1,0 +1,285 @@
+/*With the CSS box-sizing Property 
+The box-sizing property allows us to include the padding 
+and border in an element's total width and height.
+If you set box-sizing: border-box; on an element padding 
+and border are included in the width and height: Both divs are the same size now!
+ */
+ /* CSS Normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+body {
+	box-sizing: border-box;
+	background-color: #5538aacc;
+	font-family: 'Exo 2', sans-serf;
+	width: 84%;
+	margin: 0 auto;
+	height: 100%;
+	border-radius: 10px;
+}
+html {
+	background-image: url(../../../Pictures/chris-liverani-551995-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: scroll;
+    height: 100%;
+    font-size: 16px;
+}
+/* ---------------------height breakpoint -------------------*/
+@media screen and (max-height: 400px) {
+	h1 {
+		height: 50%;
+		font-size: inherit;
+	}
+	body {
+		width: 100%;
+	}
+	.title-div {
+		display: block;
+        height: 45%;
+        font-size: 1em;
+	}
+	.after-start {
+		width: 96%;
+	}
+	.picture-group {
+		width: 35%;
+	}
+	#gamePic2 {
+		height: 15vh;
+	}
+	.initial-state {
+		height: 10vh;
+	}
+}
+h1 {
+	color: #0a0505cc;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-align: center;
+	font-size: 5vw;
+	font-family: 'Varela Round', sans-serif;
+    width: 51%;
+    margin: 0;
+    clear: both;
+}
+
+.reset {
+	width: 11%;
+    border: solid 2px;
+    background-color: dodgerblue;
+    border-radius: 3px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.6s;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+
+}
+
+
+.reset:hover {
+	background-color: yellow;
+}
+
+clearfix:before,
+.clearfix:after {
+   display: table;
+   content: "";
+   line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.title-div {
+	width: 100%;
+	max-height: 30%;
+	margin-bottom: 1%;
+	text-align: -moz-center;
+	height: auto;
+}
+.mainUI-container {
+	height: 60%;
+	width: 90%;
+	/*overflow: auto;*/
+	margin: 0 auto;
+}
+
+.initial-state {
+	height: 73%;
+	width: 100%;
+	font-size: 2vw;
+	overflow: hidden;
+	margin-bottom: 9px;
+}
+/*img below set to display-block
+so margin 0 auto can be used to center it
+img is default inline-block */
+.game-state-pic {
+	width: 21%;
+	height: 60%;
+	display: block;
+	margin: 0 auto;
+}
+.start-btn {
+	border: 5px solid;
+	border-radius: 3px;
+	color: #008dfa;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.start-btn:hover {
+	color: #000;
+	background-color: dodgerblue;
+}
+.mainUI {
+	text-align: center;
+	font-size: 3vw;
+}
+.picture-group {
+	width: 100%;
+	height: 100%;
+	float: left;
+	display: block;
+	overflow: hidden;
+}
+.img-wrap {
+	position: relative;
+	width: 31%;
+	height: 100%;
+	float: left;
+	display: block;
+	overflow: hidden;
+}
+.after-start {
+	height: 58%;
+	position: relative;
+	width: 70%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+.headerBig, .headerSmall {
+    height: 40%;
+    font-family: 'Acme', sans-serif;
+}
+.scores-container {
+	position: relative;
+}
+ /*Note: the spacing below after the comma this allows me to aim at 2 elements at the same time */
+.score-player-0, .score-player-1 {
+  margin: 8px auto;
+  width: 45%;
+  height: 40px;
+  position: relative;
+  margin-bottom: 12px;
+  float: left;
+  border-radius: 4px;
+}
+.identifier {
+	font-family: 'Acme', sans-serif;
+	text-align: center;
+	line-height: 14px;
+}
+/*-----------------------------------------This is where we want to implement the active player idea ----------------------------*/ 
+.active {
+	background-color: #f3305e80;
+}
+/*-----------------------------------------------------------------------------------------------------------------------*/
+.icon-group {
+  float: left;
+  width: 20%;
+  height: 4vh;
+  background-color: #eae8e5;
+  border: 2px solid; 
+  border-radius: 2px;
+}
+.pics {
+	width: -moz-available;
+	height: inherit;
+	display: none;
+}
+#player-prompt {
+	font-family: 'Varela Round', sans-serif;
+	height: auto;
+	width: auto;
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	top: 38%;
+	left: 9%;
+	background-color: red;
+}
+#rock-hover, #paper-hover, #scissors-hover {
+    display: none;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    background: none;
+    width: 92%;
+    position: absolute;
+    left: 3%;
+    top: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #96BF3F;
+    background-color: #96BF3F;
+}
+#rock-hover:hover, #paper-hover:hover, #scissors-hover:hover {
+	display: inline-block;
+	background: #c7ee0fcc;
+	font-weight: bolder;
+}
+.result-message{
+	font-size: 50px;
+	font-family: 'Chakra Petch', sans-serif;
+	width: 100%;
+}
+.alt-background {
+	background: red;
+	color: black;
+}
+/* --------------------width breakpoint--------------------------*/
+@media screen and (max-width: 600px) {
+	body {
+		height: 89%;
+		padding-bottom: 4px;
+		margin-top: 2em;
+		width: 96%;
+	}
+	#gamePic2 {
+		width: 55%;
+		height: 100%;
+	}
+	.picture-group {
+		width: 96%;
+	}
+	h1,.headerBig  {
+		font-size: 7vw;
+		margin: 0;
+		clear: both;
+	}
+	.reset {
+		width: 18%;
+		padding: 1%;
+	}
+	.start-btn {
+        width: 30%;
+        border: 2px solid;
+	}
+	.after-start {
+		width: 100%;
+	}
+	.mainUI-container {
+		width: 105%;
+		margin: 0;
+	}
+	/*.img-wrap {
+		width: 32%;
+	}*/
+}
+

@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<!--Photo by Chris Liverani on Unsplash-->
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet"> 
+  	<link rel="stylesheet" type="text/css" href="My CSS/Paper Rock Scissors.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
+  	<!-- fontAwesome icon link below -->
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Welcome to Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Exo+2|Varela+Round|font2|etc" type="text/css">
+  </head>
+  <body class="mobile" class="laptop" class="desktop">
+  	<div class="title-div">
+  		<h1 class="headerSmall" class="headerBig">Rock Paper Scissors</h1>
+      <div id="reset-container">
+        <button class="reset">Reset Game</button>
+      </div>
+  	</div>
+  <div class="mainUI-container">
+  	<div id="player-prompt"></div>
+  	<div class="initial-state clearfix" class="game-state">
+  		<h2 class="mainUI">Press <button class="start-btn" id="start">START</button> button to begin</h2>
+  		<img id="gamePic2" class="game-state-pic" src="../../Pictures/neonbrand-428982-unsplash.jpg" title="Photo by NeONBRAND on Unsplash" alt="Photo of Boxing Gloves">
+  	</div>	
+  <div class="after-start">
+    <div class="result-message"></div>
+      <div class="img-wrap">
+        <button onclick="chingChang(this)" id="rock-hover" type="button" placeholder="ROCK" title="Rock" value="1">ROCK</button>
+        <img class="picture-group" id="rock" src="../../Pictures/susana-fernandez-66512-unsplash.jpg" title="Photo by Susana Fernández on Unsplash" alt="Picture Of Rocks">
+      </div>
+    <div class="img-wrap">
+        <button onclick="chingChang(this)" id="paper-hover" type="button" title="Paper" value="2">PAPER</button>
+        <img class="picture-group" id="paper" src="../../Pictures/kelly-sikkema-580858-unsplash.jpg" title="Photo by Kelly Sikkema on Unsplash" alt="Picture of paper">
+    </div>
+    <div class="img-wrap">
+        <button onclick="chingChang(this)" id="scissors-hover" type="button" title="Scissors" value="3">SCISSORS</button>  
+        <img class="picture-group" id="scissors" src="../../Pictures/gerrie-van-der-walt-540303-unsplash.jpg" title="Photo by Gerrie van der Walt on Unsplash" alt="Picture of Scissors">
+    </div>
+  </div>
+  		
+  <div class="scores-container clearfix" >
+     <div class="score-player-0"  >
+     	<p class="identifier">Player 1 <span class="instruction1">CHOOSE PAPER ROCK OR SCISSORS</span></p>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="tick-1"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="tick-2"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="tick-3"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="tick-4"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="tick-5"></div>
+    </div>
+    <div class="score-player-1">
+    	<p class="identifier">Computer <span class="instruction2"> CHOICE BEING MADE...</span></p> <!--This could be a typewriter function -------------->
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="cpu-tick-1"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="cpu-tick-2"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="cpu-tick-3"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="cpu-tick-4"></div>
+       <div class="icon-group"><img src="../../Pictures/check-solid.svg" class="pics" id="cpu-tick-5"></div>
+    </div>
+   </div>
+  </div>	
+
+   <script type="text/javascript" src="JavaScript/ching chang chong game.js"></script>
+  </body>
+</html>
